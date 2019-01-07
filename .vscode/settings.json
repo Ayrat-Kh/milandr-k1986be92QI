@@ -1,0 +1,6 @@
+{
+    "files.associations": {
+        "mdr32f9qx_port.h": "c",
+        "mdr32f9qx_config.h": "c"
+    }
+}

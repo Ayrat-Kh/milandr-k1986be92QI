@@ -1,0 +1,37 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Build and program",
+            "type": "shell",
+            "group":"build",
+            "osx": {
+                "command": "make COMPILER_DIRS=/Users/admin/apps/gcc-arm-none-eabi/bin/ && openocd -f interface/stlink-v2.cfg -c \"transport select hla_swd\" -f target/mdr32f9q2i.cfg -c \"program ./build/app.elf verify reset exit\""
+            }
+        },
+        {
+            "label": "Build",
+            "type": "shell",
+            "group":"build",
+            "osx": {
+                "command": "make COMPILER_DIRS=/Users/admin/apps/gcc-arm-none-eabi/bin/"
+            }
+        },
+        {
+            "label": "Rebuild",
+            "type": "shell",
+            "group":"build",
+            "osx": {
+                "command": "make clean && make COMPILER_DIRS=/Users/admin/apps/gcc-arm-none-eabi/bin/"
+            }
+        },
+        {
+            "label": "Clean",
+            "type": "shell",
+            "group":"build",
+            "osx": {
+                "command": "make clean && make COMPILER_DIRS=/Users/admin/apps/gcc-arm-none-eabi/bin/"
+            }
+        }  
+    ]
+}
